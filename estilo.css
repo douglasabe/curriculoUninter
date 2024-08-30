@@ -1,0 +1,159 @@
+
+<!--Propriedades dos elementos da página, remoção da margem e espaçãmento dos elementos, preenchimento e a borda na largura e altura-->
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*formatação flexivel dos elementos*/
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100vw;
+    margin: 3px;
+}
+
+/*formatação similar dos elementos */
+header, nav, main, aside, footer {
+    display: flex;
+    margin: 3px;
+}
+
+/*formatação flexivel dos elementos*/
+header{
+    flex: 1 1 100vw;
+    background: black;
+}
+
+/*formatação flexivel dos elementos*/
+header #foto {
+    display: flex;
+    flex: 0 1 200px;
+    background: black;
+    justify-content: center;
+    align-items: center;
+}
+
+/*formatação de borda e cor, muda curso do mouse*/
+#openMenu, #closeMenu {
+    border: none;
+    background: rgb(8, 8, 8);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px 5px;
+    cursor: pointer;
+    display: none;
+    color: white;
+
+}
+/*formatação flexivel e alinhamento dos elementos*/
+nav{
+    background: black;
+    background-color: black;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1 1 200px;
+                           
+}
+/*formatação dos elementos*/
+nav a{
+    margin: 0 3%;
+    font-size: 15pt;
+    color: white;
+    text-decoration: none;
+}
+/*fomatação flexivel*/
+main{
+    flex: 20 1 500px; 
+}
+/*fomatação flexivel*/
+aside{
+    flex:1 1 200px;
+}
+/*fomatação flexivel*/
+footer{
+    flex: 1 1 100vw;
+    
+ }
+
+/* Altera o estilo dos elementos para serem apresentados de acordo com o tamanho da tela, ajuste de posicionamento dos elementos*/     
+@media only screen and (max-width: 717px) {
+#openMenu, #closeMenu {
+    
+    display: block;
+}
+
+#openMenu {
+   
+    margin-left: auto;
+}
+
+#closeMenu {
+    
+    position: fixed;
+    right: 15px;
+    top: 15px;
+}
+
+/*alinhamento, posicioinamento e ocupação dos elementos na tela*/
+nav {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(34, 33, 33, 0.8);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    display: none;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* Margem de todos os lados. */
+nav a {
+    margin: 3%;
+}
+}
+
+/*formatação similar dos elementos */
+#infoProfissional, #formacoes, #infoPessoais, #pessoal, #rodape {
+background-color: black;
+color: white;
+text-align: center;
+}
+
+/*formatação similar dos elementos */
+#cabecalho, #datas {
+background: rgb(187, 185, 185);
+color: rgb(58, 57, 57);
+text-align: center;
+}
+
+/*formatação similar dos elementos */
+#cargos, #cursos {
+font-size: 16px;
+text-align: left;
+}
+
+/*alinhamento dos textos do rodape*/
+#rodape {
+text-align: left;
+}
+
+/*formatação de tabela referente ao formulário*/
+table {
+width: 580px;
+padding: 10px;
+background-color: #c5e7e0;
+}
+
+th {
+text-align: left;
+border-bottom: 1px solid;
+}
+
+td {
+padding: 10px;
+}
